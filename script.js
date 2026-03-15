@@ -136,6 +136,7 @@ const processInput = function (action, inputValue, textContent) {
 
 table.addEventListener("click", (event) => {
     const target = event.target;
+    if (!target.dataset.type) return;
     valueToShow = processInput(target.dataset.type, target.name, target.innerText);
     updateDisplay(valueToShow);
 });
