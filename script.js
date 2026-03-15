@@ -126,33 +126,27 @@ const handleFunctions = function (functionInput) {
 const processInput = function (action, inputValue, textContent) {
     switch (action) {
         case "number":
-            valueToShow = evaluteNumbers(textContent);
-            break;
+            return evaluteNumbers(textContent);
         case "operator":
-            valueToShow = handleOperators(inputValue);
-            break;
+            return handleOperators(inputValue);
         case "function":
-            valueToShow = handleFunctions(inputValue);
-            break;
+            return handleFunctions(inputValue);
     }
-
-    updateDisplay(valueToShow);
 };
 
 table.addEventListener("click", (event) => {
     const target = event.target;
-    processInput(target.dataset.type, target.name, target.innerText);
+    valueToShow = processInput(target.dataset.type, target.name, target.innerText);
+    updateDisplay(valueToShow);
 });
 
 document.addEventListener("keydown", (event) => {
     const key = event.key;
     if (/[0-9]/.test(key)) {
-        processInput("number", key, key);
-        return;
+        valueToShow = processInput("number", key, key);
+    } else if (keyMap[key]) {
+        valueToShow = processInput(keyMap[key].type, keyMap[key].value, keyMap[key].value);
     }
 
-    if (keyMap[key]) {
-        processInput(keyMap[key].type, keyMap[key].value, keyMap[key].value);
-        return;
-    }
+    updateDisplay(valueToShow);
 });
