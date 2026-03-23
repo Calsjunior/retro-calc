@@ -88,3 +88,8 @@ button {
     background-color: #ec8923;
     box-shadow: 0 4px #f15f2c;
 }
+
+.calc__btn--function {
+    background-color: #cd3333;
+    box-shadow: 0 4px #72231c;
+}
