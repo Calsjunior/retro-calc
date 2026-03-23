@@ -83,3 +83,8 @@ button {
     transform: translateY(1px);
     box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.4);
 }
+
+.calc__btn--operator {
+    background-color: #ec8923;
+    box-shadow: 0 4px #f15f2c;
+}
