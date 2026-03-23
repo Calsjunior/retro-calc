@@ -3,102 +3,100 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Calculator</title>
+        <title>Retro calc (short for Calculator)</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
     <body>
+        <section class="calc">
+            <header class="calc__header"><output class="calc__result">0</output></header>
 
-        <div id="calculator">
-            <div id="calculator-container">
-                <table>
-                    <tr>
-                        <td colspan="100%" class="display">0</td>
-                    </tr>
+            <div class="calc__keypad">
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">x</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">C</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">%</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn calc__btn--operator">
+                            &divide;
+                        </button>
+                    </li>
+                </ul>
 
-                    <tr>
-                        <td>
-                            <button class="calculator-button" data-type="function" name="backspace">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 640 512"><!--!Font Awesome Free v5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                                    <path
-                                        d="M576 64H205.26A63.97 63.97 0 0 0 160 82.75L9.37 233.37c-12.5 12.5-12.5 32.76 0 45.25L160 429.25c12 12 28.28 18.75 45.25 18.75H576c35.35 0 64-28.65 64-64V128c0-35.35-28.65-64-64-64zm-84.69 254.06c6.25 6.25 6.25 16.38 0 22.63l-22.62 22.62c-6.25 6.25-16.38 6.25-22.63 0L384 301.25l-62.06 62.06c-6.25 6.25-16.38 6.25-22.63 0l-22.62-22.62c-6.25-6.25-6.25-16.38 0-22.63L338.75 256l-62.06-62.06c-6.25-6.25-6.25-16.38 0-22.63l22.62-22.62c6.25-6.25 16.38-6.25 22.63 0L384 210.75l62.06-62.06c6.25-6.25 16.38-6.25 22.63 0l22.62 22.62c6.25 6.25 6.25 16.38 0 22.63L429.25 256l62.06 62.06z" />
-                                </svg>
-                            </button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="function" name="clear">C</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="modulo">%</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="divide">&#247</button>
-                        </td>
-                    </tr>
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">7</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">8</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">9</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn calc__btn--operator">
+                            x
+                        </button>
+                    </li>
+                </ul>
 
-                    <tr>
-                        <td>
-                            <button class="calculator-button" data-type="number">7</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">8</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">9</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="multiply">x</button>
-                        </td>
-                    </tr>
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">4</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">5</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">6</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn calc__btn--operator">
+                            -
+                        </button>
+                    </li>
+                </ul>
 
-                    <tr>
-                        <td>
-                            <button class="calculator-button" data-type="number">4</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">5</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">6</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="subtract">-</button>
-                        </td>
-                    </tr>
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">1</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">2</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">3</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn calc__btn--operator">
+                            +
+                        </button>
+                    </li>
+                </ul>
 
-                    <tr>
-                        <td>
-                            <button class="calculator-button" data-type="number">1</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">2</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">3</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="add">+</button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <button class="calculator-button" data-type="number">+/-</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">0</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="number">.</button>
-                        </td>
-                        <td>
-                            <button class="calculator-button" data-type="operator" name="equal">=</button>
-                        </td>
-                    </tr>
-                </table>
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">+/-</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">0</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn">.</button>
+                    </li>
+                    <li class="calc__item">
+                        <button type="button" class="calc__btn calc__btn--operator">
+                            =
+                        </button>
+                    </li>
+                </ul>
             </div>
-        </div>
-
+        </section>
     </body>
 </html>
