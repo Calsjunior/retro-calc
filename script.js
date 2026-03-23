@@ -123,10 +123,10 @@ const handleFunctions = function (functionInput) {
     }
 };
 
-const processInput = function (action, inputValue, textContent) {
+const processInput = function (action, inputValue) {
     switch (action) {
         case "number":
-            return evaluteNumbers(textContent);
+            return evaluteNumbers(inputValue);
         case "operator":
             return handleOperators(inputValue);
         case "function":
@@ -137,7 +137,7 @@ const processInput = function (action, inputValue, textContent) {
 keypad.addEventListener("click", (event) => {
     const target = event.target;
     if (!target.dataset.type) return;
-    valueToShow = processInput(target.dataset.type, target.name, target.innerText);
+    valueToShow = processInput(target.dataset.type, target.value);
     updateDisplay(valueToShow);
 });
 
@@ -146,7 +146,7 @@ document.addEventListener("keydown", (event) => {
     if (/[0-9]/.test(key)) {
         valueToShow = processInput("number", key, key);
     } else if (keyMap[key]) {
-        valueToShow = processInput(keyMap[key].type, keyMap[key].value, keyMap[key].value);
+        valueToShow = processInput(keyMap[key].type, keyMap[key].value);
     }
 
     updateDisplay(valueToShow);
