@@ -5,11 +5,16 @@
 }
 
 body {
+    font-family: "Orbitron", sans-serif;
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+button {
+    font-family: inherit;
 }
 
 .calc {
