@@ -1,5 +1,5 @@
-const display = document.querySelector(".display");
-const table = document.querySelector("table");
+const result = document.querySelector(".calc__result");
+const keypad = document.querySelector(".calc__keypad");
 
 let firstNumber = "0";
 let operator = null;
@@ -48,7 +48,7 @@ const clear = function () {
 };
 
 const updateDisplay = function (number) {
-    display.innerText = number;
+    result.innerText = number;
 };
 
 // TODO:
@@ -134,7 +134,7 @@ const processInput = function (action, inputValue, textContent) {
     }
 };
 
-table.addEventListener("click", (event) => {
+keypad.addEventListener("click", (event) => {
     const target = event.target;
     if (!target.dataset.type) return;
     valueToShow = processInput(target.dataset.type, target.name, target.innerText);
