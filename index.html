@@ -19,16 +19,38 @@
             <div class="calc__keypad">
                 <ul class="calc__row">
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">x</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="function"
+                            value="backspace">
+                            x
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">C</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="function"
+                            value="clear">
+                            C
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">%</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="operator"
+                            value="modulo">
+                            %
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn calc__btn--operator">
+                        <button
+                            type="button"
+                            class="calc__btn calc__btn--operator"
+                            data-type="operator"
+                            value="divide">
                             &divide;
                         </button>
                     </li>
@@ -36,61 +58,157 @@
 
                 <ul class="calc__row">
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">7</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="7">
+                            7
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">8</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="8">
+                            8
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">9</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="9">
+                            9
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn calc__btn--operator">x</button>
-                    </li>
-                </ul>
-
-                <ul class="calc__row">
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">4</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">5</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">6</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn calc__btn--operator">-</button>
-                    </li>
-                </ul>
-
-                <ul class="calc__row">
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">1</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">2</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn">3</button>
-                    </li>
-                    <li class="calc__item">
-                        <button type="button" class="calc__btn calc__btn--operator">+</button>
+                        <button
+                            type="button"
+                            class="calc__btn calc__btn--operator"
+                            data-type="operator"
+                            value="multiply">
+                            x
+                        </button>
                     </li>
                 </ul>
 
                 <ul class="calc__row">
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">+/-</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="4">
+                            4
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">0</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="5">
+                            5
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn">.</button>
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="6">
+                            6
+                        </button>
                     </li>
                     <li class="calc__item">
-                        <button type="button" class="calc__btn calc__btn--operator">=</button>
+                        <button
+                            type="button"
+                            class="calc__btn calc__btn--operator"
+                            data-type="operator"
+                            value="subtract">
+                            -
+                        </button>
+                    </li>
+                </ul>
+
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="1">
+                            1
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="2">
+                            2
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="3">
+                            3
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn calc__btn--operator"
+                            data-type="operator"
+                            value="add">
+                            +
+                        </button>
+                    </li>
+                </ul>
+
+                <ul class="calc__row">
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="function"
+                            value="plusminus">
+                            +/-
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value="0">
+                            0
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn"
+                            data-type="number"
+                            value=".">
+                            .
+                        </button>
+                    </li>
+                    <li class="calc__item">
+                        <button
+                            type="button"
+                            class="calc__btn calc__btn--operator"
+                            data-type="operator"
+                            value="equal">
+                            =
+                        </button>
                     </li>
                 </ul>
             </div>
