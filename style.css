@@ -28,6 +28,9 @@ body {
     padding: 35px;
     background-color: #018391;
     border-radius: 8px;
+    box-shadow:
+        0 4px #015e68,
+        inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .calc__result {
