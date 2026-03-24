@@ -1,8 +1,10 @@
 # calculator
 
-A web calculator program built using HTML, CSS, and Javascript.
+A retro theme calc (short for calculator, btw) program built using HTML, CSS, and Javascript.
 
 This project was made for the [The Odin Project](https://www.theodinproject.com/).
+
+![Retro themed calculator](assets/calc.png)
 
 ## Features
 - Handles arithmetic operations.
