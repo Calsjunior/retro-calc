@@ -12,4 +12,4 @@ This project was made for the [The Odin Project](https://www.theodinproject.com/
 - Handles keyboard support on all devices.
 
 ## Demo
-https://calsjunior.github.io/calculator/
+https://calsjunior.github.io/retro-calc/
