@@ -121,6 +121,20 @@ const handleFunctions = (functionInput) => {
 
         return current;
     }
+
+    if (functionInput === "plusminus") {
+        let current = operator === null ? firstNumber : secondNumber;
+
+        current = (parseFloat(current) * -1).toString();
+
+        if (operator === null) {
+            firstNumber = current;
+        } else {
+            secondNumber = current;
+        }
+
+        return current;
+    }
 };
 
 const processInput = (action, inputValue) => {
