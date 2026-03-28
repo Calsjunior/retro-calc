@@ -25,7 +25,7 @@ const multiply = (a, b) => a * b;
 const divide = (a, b) => (b === 0 ? "Error" : a / b);
 const modulo = (a, b) => a % b;
 
-const operate = function (operator, firstNumber, secondNumber) {
+const operate = (operator, firstNumber, secondNumber) => {
     switch (operator) {
         case "add":
             return add(firstNumber, secondNumber);
@@ -40,21 +40,21 @@ const operate = function (operator, firstNumber, secondNumber) {
     }
 };
 
-const clear = function () {
+const clear = () => {
     firstNumber = "0";
     operator = null;
     secondNumber = "";
     valueToShow = "0";
 };
 
-const updateDisplay = function (number) {
+const updateDisplay = (number) => {
     result.innerText = number;
 };
 
 // TODO:
 const getCurrentNumber = 0;
 
-const evaluteNumbers = function (numberInput) {
+const evaluteNumbers = (numberInput) => {
     let current = operator === null ? firstNumber : secondNumber;
 
     // Prevents multiple dots
@@ -82,7 +82,7 @@ const evaluteNumbers = function (numberInput) {
     return current;
 };
 
-const handleOperators = function (operatorInput) {
+const handleOperators = (operatorInput) => {
     if (firstNumber !== "" && secondNumber !== "" && operator !== null) {
         const result = operate(operator, parseFloat(firstNumber), parseFloat(secondNumber));
         firstNumber = result.toString();
@@ -97,7 +97,7 @@ const handleOperators = function (operatorInput) {
     return firstNumber || "0";
 };
 
-const handleFunctions = function (functionInput) {
+const handleFunctions = (functionInput) => {
     if (functionInput === "clear") {
         clear();
         return firstNumber;
@@ -123,7 +123,7 @@ const handleFunctions = function (functionInput) {
     }
 };
 
-const processInput = function (action, inputValue) {
+const processInput = (action, inputValue) => {
     switch (action) {
         case "number":
             return evaluteNumbers(inputValue);
