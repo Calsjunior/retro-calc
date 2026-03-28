@@ -85,7 +85,7 @@ const evaluteNumbers = (numberInput) => {
 const handleOperators = (operatorInput) => {
     if (firstNumber !== "" && secondNumber !== "" && operator !== null) {
         const result = operate(operator, parseFloat(firstNumber), parseFloat(secondNumber));
-        firstNumber = result.toString();
+        firstNumber = (Math.round(result * 1e10) / 1e10).toString();
         secondNumber = "";
     }
 
