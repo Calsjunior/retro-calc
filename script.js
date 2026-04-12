@@ -147,7 +147,7 @@ keypad.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
     const key = event.key;
     if (/[0-9]/.test(key)) {
-        valueToShow = processInput("number", key, key);
+        valueToShow = processInput("number", key);
     } else if (keyMap[key]) {
         valueToShow = processInput(keyMap[key].type, keyMap[key].value);
     }
