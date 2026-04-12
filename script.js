@@ -40,6 +40,19 @@ const operate = (operator, firstNumber, secondNumber) => {
     }
 };
 
+const getCurrentNumber = () => {
+    const current = operator === null ? firstNumber : secondNumber;
+    return current;
+};
+
+const setCurrentNumber = (current) => {
+    if (operator === null) {
+        firstNumber = current;
+    } else {
+        secondNumber = current;
+    }
+};
+
 const clear = () => {
     firstNumber = "0";
     operator = null;
@@ -48,22 +61,14 @@ const clear = () => {
 };
 
 const updateDisplay = (number) => {
-    result.innerText = number;
+    result.innerText = number.length > 10 ? parseFloat(number).toExponential(5) : number;
 };
 
-// TODO:
-const getCurrentNumber = 0;
-
 const evaluteNumbers = (numberInput) => {
-    let current = operator === null ? firstNumber : secondNumber;
+    let current = getCurrentNumber();
 
     // Prevents multiple dots
     if (numberInput === "." && current.includes(".")) {
-        return current;
-    }
-
-    // TODO: properly implement a way to handle long numbers from input and during calculations
-    if (current.length > 12) {
         return current;
     }
 
@@ -73,12 +78,7 @@ const evaluteNumbers = (numberInput) => {
         current += numberInput;
     }
 
-    if (operator === null) {
-        firstNumber = current;
-    } else {
-        secondNumber = current;
-    }
-
+    setCurrentNumber(current);
     return current;
 };
 
@@ -103,9 +103,8 @@ const handleFunctions = (functionInput) => {
         return firstNumber;
     }
 
-    // TODO: helper function to determine current number
     if (functionInput === "backspace") {
-        let current = operator === null ? firstNumber : secondNumber;
+        let current = getCurrentNumber();
 
         if (current.length <= 1 || current === "0" || current === "-") {
             current = "0";
@@ -113,26 +112,16 @@ const handleFunctions = (functionInput) => {
             current = current.slice(0, -1);
         }
 
-        if (operator === null) {
-            firstNumber = current;
-        } else {
-            secondNumber = current;
-        }
-
+        setCurrentNumber(current);
         return current;
     }
 
     if (functionInput === "plusminus") {
-        let current = operator === null ? firstNumber : secondNumber;
+        let current = getCurrentNumber();
 
         current = (parseFloat(current) * -1).toString();
 
-        if (operator === null) {
-            firstNumber = current;
-        } else {
-            secondNumber = current;
-        }
-
+        setCurrentNumber(current);
         return current;
     }
 };
